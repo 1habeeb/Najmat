@@ -1,0 +1,34 @@
+    <ThemeProvider>  
+      <Layout>
+        <Flex>
+          <Box w={500} p={4} my={15} mx="auto" >
+            <Heading as="h1" textAlign="center">
+              اهلا بك في الصفحة الرئيسية
+            </Heading>
+            <text mt={8} textAlign="center" 
+              alignItems="center"
+              justifycontent="center"> {`User ID: ${
+              user ? user.uid : "لم يتم الدخول"
+            }`}</text>
+            <Stack 
+              mt={8}
+              alignItems="center"
+              justifycontent="center"
+              isInline
+              width="100%"
+            >
+              <Button variant ="solid" variantColor ="blue" width="100%" isDisabled={!user}>
+                <Link href="/Process">
+                <a>الرجاء تسجيل الدخول</a>
+                </Link>
+              </Button>
+              <Button variant ="solid" variantColor ="green" width="100%" isDisabled={user}>
+                <Link href="/login">
+                <a>الرجاء تسجيل الدخول</a>
+                </Link>
+              </Button>
+              </Stack>
+          </Box>
+        </Flex>
+      </Layout>
+    </ThemeProvider>
